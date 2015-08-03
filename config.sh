@@ -181,12 +181,6 @@ echo "Speeding up wake from sleep"
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 sudo pmset -a standbydelay 86400
 
-echo "Set sleep time to 2 minutes"
-sudo pmset -a displaysleep 2
-
-echo "Sleep hard drives after two hours"
-sudo pmset -a disksleep 120
-
 ################################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
 ###############################################################################
