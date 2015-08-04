@@ -56,6 +56,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias bashconfig="vim ~/.bash_profile"
 alias subl="/opt/homebrew-cask/Caskroom/sublime-text3/Build\ 3083/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias hook="scp -p -P 29418 kevin.schaich@gerrit.workday.com:hooks/commit-msg .git/hooks/"
+alias update="brew update && brew upgrade && brew cleanup && brew cask cleanup"
 function hide(){
     defaults write com.apple.finder AppleShowAllFiles -bool NO
     killall Finder
@@ -63,10 +64,6 @@ function hide(){
 function show(){
     defaults write com.apple.finder AppleShowAllFiles -bool YES
     killall Finder
-}
-function removetest(){
-    mkdir ~/.Trash
-    mv $1 ~/.Trash
 }
 
 # bind UP and DOWN arrow keys
