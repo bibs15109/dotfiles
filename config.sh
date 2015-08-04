@@ -406,6 +406,7 @@ ln -sfF ~/dotfiles/.atom ~
 ln -sfF ~/dotfiles/.bashrc ~
 ln -sfF ~/dotfiles/.bash_profile ~
 ln -sfF ~/dotfiles/.iterm2 ~
+ln -sfF ~/dotfiles/.inputrc ~
 ln -sfF ~/dotfiles/.vimrc ~
 ln -sfF ~/dotfiles/.zshrc ~
 sudo cp ~/dotfiles/dark.terminal /Applications/Utilities/Terminal.app/Contents/Resources/Initial\ Settings/
