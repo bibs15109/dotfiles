@@ -428,8 +428,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool FALSE
 
 echo "Enabling UTF-8 ONLY in Terminal.app and setting the dark theme by default"
 defaults write com.apple.terminal StringEncodings -array 4
-defaults write com.apple.Terminal "Default Window Settings" -string "dark"
-defaults write com.apple.Terminal "Startup Window Settings" -string "dark"
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 ###############################################################################
 # Kill affected applications
