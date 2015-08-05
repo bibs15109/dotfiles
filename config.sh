@@ -181,12 +181,6 @@ echo "Speeding up wake from sleep"
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 sudo pmset -a standbydelay 86400
 
-echo "Set sleep time to 2 minutes"
-sudo pmset -a displaysleep 2
-
-echo "Sleep hard drives after two hours"
-sudo pmset -a disksleep 120
-
 ################################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
 ###############################################################################
@@ -412,6 +406,7 @@ ln -sfF ~/dotfiles/.atom ~
 ln -sfF ~/dotfiles/.bashrc ~
 ln -sfF ~/dotfiles/.bash_profile ~
 ln -sfF ~/dotfiles/.iterm2 ~
+ln -sfF ~/dotfiles/.inputrc ~
 ln -sfF ~/dotfiles/.vimrc ~
 ln -sfF ~/dotfiles/.zshrc ~
 sudo cp ~/dotfiles/dark.terminal /Applications/Utilities/Terminal.app/Contents/Resources/Initial\ Settings/
@@ -433,8 +428,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool FALSE
 
 echo "Enabling UTF-8 ONLY in Terminal.app and setting the dark theme by default"
 defaults write com.apple.terminal StringEncodings -array 4
-defaults write com.apple.Terminal "Default Window Settings" -string "dark"
-defaults write com.apple.Terminal "Startup Window Settings" -string "dark"
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 ###############################################################################
 # Kill affected applications
