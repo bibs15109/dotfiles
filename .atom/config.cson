@@ -23,12 +23,21 @@
       "monokai"
     ]
     excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      "*.git"
+      "*.DS_Store"
+      "*._*"
+      "*.pyc"
+    ]
+    disabledPackages: [
+      "linter-flake8"
+    ]
   editor:
     invisibles: {}
     tabLength: 4
     nonWordCharacters: "./\\\\()\\\"':,.;<>~!@#$%^&*|+=[]{}`~?"
     fontFamily: "Liberation Mono"
-    fontSize: 13
+    fontSize: 15
   linter: {}
   "linter-flake8": {}
   minimap:
@@ -39,9 +48,13 @@
     gitPath: "/usr/local/bin/git"
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   "git-history":
     showDiff: false
   "spell-check": {}
-  "git-diff": {}
+  "git-diff":
+    showIconsInEditorGutter: true
   "autoclose-html": {}
+  "linter-pylama":
+    executablePath: "/usr/local/bin/pylama"
+    usePylint: true
+    ignoreErrorsAndWarnings: "D200,E402,D202"

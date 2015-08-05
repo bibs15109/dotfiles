@@ -1,40 +1,66 @@
 {
   "name": "linter-flake8",
-  "linter-package": true,
-  "main": "./lib/init",
-  "version": "1.5.0",
+  "main": "./lib/main",
+  "version": "1.6.0",
   "description": "Atom linter plugin for Python, using flake8",
   "repository": {
     "type": "git",
     "url": "https://github.com/AtomLinter/linter-flake8"
   },
   "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
+  "dependencies": {
+    "atom-linter": "^2.0.0"
   },
-  "dependencies": {},
-  "readme": "# linter-flake8 package\n\nThis is a **linter-flake8** plugin for [Linter](https://github.com/AtomLinter/Linter). It\nis an interface to [flake8](https://pypi.python.org/pypi/flake8).\n\n![img](https://raw.githubusercontent.com/badray/linter-flake8/master/in_action.gif)\n\n### Requirements\n*Linter* package must be installed in order to use this plugin. If *Linter* is not\ninstalled, please follow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### Installation\nTo use a plugin, you must ensure that `flake8` is installed on your\nsystem.\n\nInstall [flake8](https://pypi.python.org/pypi/flake8) by typing the following\nin a terminal:\n   ```\n   pip install flake8\n   ```\n\nInstall plugin by typing:\n   ```\n   $ apm install linter-flake8\n   ```\n\n##### Bult-in docstrings check (Optional)\nTo include built-in docstrings (pep257) support you will also need to install:\n   ```\n   pip install flake8-docstrings\n   ```\nor:\n   ```\n   pip install flake8-pep257\n   ```\n\n##### OpenStack Style Guidelines check (Optional)\nTo support [OpenStack Style Guidelines](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html), you will also need to install [hacking](https://github.com/openstack-dev/hacking) module:\n  ```\n  pip install hacking\n  ```\n\n### Settings\nYou can configure linter-flake8 as nearly all [Atom](https://atom.io/) modules by editing plugin settings in *Atom->Preferences->Packages->linter-flake-8*.\n\n![img](https://raw.githubusercontent.com/badray/linter-flake8/master/screenshot_settings.png)\n\nOr if you prefere you can use Atom *config.cson* file *~/.atom/config.cson* (click *Open Your Config*\nin *Atom* menu).\n\nIn configuration you can specify executable directory if node hasn't it in **$PATH**. Example:\n\n```\n'linter-flake8':\n  'executableDir': '/usr/local/bin/'\n```\n\n### Project configuration files\nLinter also supports reading flake8 configuration files. To use them, you need specify their names manually into *Config Files Names* in plugin settings. Please take a note, that  plugin settings from configuration panel will be **ignored** if configuration file was found.\n\n![img](https://raw.githubusercontent.com/badray/linter-flake8/master/screenshot_config_names.png)\n\n## Donation\n[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)\n",
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "linter-flake8\n=============\n\nlinter-flake8 is a [flake8](https://pypi.python.org/pypi/flake8 provider for [Linter](https://github.com/AtomLinter/Linter).\n\n![img](https://cloud.githubusercontent.com/assets/4278113/8768482/52f975c6-2e3f-11e5-87e4-27c8359fd36c.gif)\n\n### Requirements\nLinter package must be installed in order to use this plugin. If it's not\ninstalled, please follow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### Installation\nTo use a plugin, you must ensure that `flake8` is installed on your\nsystem.\n\nInstall [flake8](https://pypi.python.org/pypi/flake8) by typing the following\nin a terminal:\n   ```\n   pip install flake8\n   ```\n\nInstall plugin by typing:\n   ```\n   $ apm install linter-flake8\n   ```\n\n##### Bult-in docstrings check (Optional)\nTo include built-in docstrings (pep257) support you will also need to install:\n   ```\n   pip install flake8-docstrings\n   ```\nor:\n   ```\n   pip install flake8-pep257\n   ```\n\n##### OpenStack Style Guidelines check (Optional)\nTo support [OpenStack Style Guidelines](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html), you will also need to install [hacking](https://github.com/openstack-dev/hacking) module:\n  ```\n  pip install hacking\n  ```\n\n### Settings\nYou can configure linter-flake8 as nearly all [Atom](https://atom.io/) modules by editing plugin settings in *Atom->Preferences->Packages->linter-flake-8*.\n\n![img](https://cloud.githubusercontent.com/assets/4278113/8768488/91fffae2-2e3f-11e5-9783-9513b882cbc0.png)\n\nOr if you prefere you can use Atom *config.cson* file *~/.atom/config.cson* (click *Open Your Config*\nin *Atom* menu).\n\nIn configuration you can specify executable directory if node hasn't it in **$PATH**. Example:\n\n```\n'linter-flake8':\n  'executableDir': '/usr/local/bin/'\n```\n\n### Project configuration files\nLinter also supports reading flake8 configuration files. To use them, you need specify their names manually into *Config Files Names* in plugin settings. Please take a note, that  plugin settings from configuration panel will be **ignored** if configuration file was found.\n\n![img](https://cloud.githubusercontent.com/assets/4278113/8768510/0d3769f2-2e40-11e5-8e27-d31991973246.png)\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-flake8/issues"
   },
   "homepage": "https://github.com/AtomLinter/linter-flake8",
-  "_id": "linter-flake8@1.5.0",
-  "_shasum": "6afbde68f86c45e200acbf88ec628eacb307ac1a",
-  "_resolved": "file:../d-11568-2582-1ebqi0m/package.tgz",
-  "_from": "../d-11568-2582-1ebqi0m/package.tgz",
+  "_id": "linter-flake8@1.6.0",
+  "_shasum": "7a98c1ae6a5d0b87b934711b3b63118fd791f3bb",
+  "_resolved": "file:../d-11574-85213-gaxcf0/package.tgz",
+  "_from": "../d-11574-85213-gaxcf0/package.tgz",
   "_atomModuleCache": {
     "version": 1,
-    "dependencies": [],
+    "dependencies": [
+      {
+        "name": "xregexp",
+        "version": "2.0.0",
+        "path": "node_modules/atom-linter/node_modules/xregexp/xregexp-all.js"
+      }
+    ],
     "extensions": {
       ".coffee": [
-        "lib/init.coffee",
-        "lib/linter-flake8.coffee"
+        "lib/main.coffee",
+        "node_modules/atom-linter/lib/helpers.coffee"
       ],
       ".json": [
+        "node_modules/atom-linter/node_modules/xregexp/package.json",
+        "node_modules/atom-linter/package.json",
         "package.json"
+      ],
+      ".js": [
+        "node_modules/atom-linter/node_modules/xregexp/xregexp-all.js"
       ]
     },
-    "folders": []
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          ""
+        ],
+        "dependencies": {
+          "atom-linter": "^2.0.0"
+        }
+      }
+    ]
   }
 }
