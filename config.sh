@@ -25,12 +25,14 @@ brew install zsh-syntax-highlighting
 brew install wget
 brew install unrar
 brew install python
+brew install ruby
 brew install tree
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
 pip install flake8
+pip install pylama
 
 curl https://install.meteor.com/ | sh
 
@@ -52,6 +54,7 @@ brew cask install utorrent
 brew cask install vlc
 brew cask install virtualbox
 brew cask install vagrant
+brew cask install packer
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown

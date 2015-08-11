@@ -31,6 +31,7 @@
     ]
     disabledPackages: [
       "linter-flake8"
+      "close-tags"
     ]
   editor:
     invisibles: {}
@@ -58,3 +59,6 @@
     executablePath: "/usr/local/bin/pylama"
     usePylint: true
     ignoreErrorsAndWarnings: "D200,E402,D202"
+  "close-tags": {}
+  "autocomplete-plus": {}
+  "atom-ternjs": {}

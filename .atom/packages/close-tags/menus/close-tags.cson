@@ -1,0 +1,4 @@
+'context-menu':
+  'atom-text-editor': [
+    { 'label': 'Close current tag', 'command': 'close-tags:close' }
+  ]
